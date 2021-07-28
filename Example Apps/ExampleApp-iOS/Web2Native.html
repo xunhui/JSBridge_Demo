@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Document</title>
+  <style type='text/css'>
+      html {
+          font-family: Helvetica;
+          color: #222;
+      }
+      h1 {
+          color: steelblue;
+          font-size: 24px;
+          margin-top: 24px;
+      }
+      #btn {
+        width: 100px;
+        height: 35px;
+        background: white;
+        border-radius: 5px;
+      }
+  </style>
+</head>
+<body>
+  <h1>Demo2_Web2Native</h1>
+  <p id="test">I am a web tag.</p>
+  <button id="btn">打开相册</button>
+</body>
+<script>
+  const CUSTOM_PROTOCOL_SCHEME = 'prek'
+
+  function web2Native(event_name) {
+      const messagingIframe = document.createElement('iframe');
+      messagingIframe.style.display = 'none';
+      messagingIframe.src = CUSTOM_PROTOCOL_SCHEME + '://' + event_name;
+      document.documentElement.appendChild(messagingIframe);
+      setTimeout(() => {
+          document.documentElement.removeChild(messagingIframe);
+      }, 200)
+  }
+
+  const btn = document.querySelector('#btn')
+  btn.onclick = () => {
+    web2Native('openPhotoAlbum')
+  }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Document</title>
+  <style type='text/css'>
+      html {
+          font-family: Helvetica;
+          color: #222;
+      }
+      h1 {
+          color: steelblue;
+          font-size: 24px;
+          margin-top: 24px;
+      }
+  </style>
+</head>
+<body>
+  <h1>Demo1_Native2Web</h1>
+  <p id="test">I am a web tag.</p>
+</body>
+<script>
+    function evaluateByNative(params) {
+        const p = document.createElement('p');
+        p.innerText = params;
+        document.body.appendChild(p);
+        return 'Hello Bridge!';
+    }
+</script>
+</html>
