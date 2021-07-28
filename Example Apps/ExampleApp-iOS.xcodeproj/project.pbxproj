@@ -70,13 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B458A4E269DF9910076F5C5 /* Demo1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Demo1;
-			sourceTree = "<group>";
-		};
 		2C1562A7176B9F5400B4AE50 /* WebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +89,6 @@
 		2CA045B617117439006DEE8B /* ExampleApp-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2B458A4E269DF9910076F5C5 /* Demo1 */,
 				2CA0465B1711AC8D006DEE8B /* completeJSB.html */,
 				2B458A4C269DF9780076F5C5 /* Native2Web.html */,
 				0ECB01421A0EE1BA0037FF4E /* Demo3WebViewController.h */,
